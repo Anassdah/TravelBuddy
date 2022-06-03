@@ -4,11 +4,25 @@
   align-items: center;
   justify-content: center;
 }
+.logo{
+  text-align: center;
+  color: #105a8e;
+  font-family: cursive;
+}
+body{
+  /*background-image: url(../../../../assets/images/wallpaperbetter.com_3840x2160.jpg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
 
 .lContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
+
 }
 
 .lInput{
@@ -29,4 +43,10 @@
 .lButton:disabled{
   background-color: #0071c28c;
   cursor: not-allowed;
+}
+.undisplay{
+  display: none;
+}
+.display{
+  display: block;
 }

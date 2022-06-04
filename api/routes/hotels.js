@@ -13,19 +13,19 @@ import Hotel from "../models/Hotel.js";
 import {verifyAdmin} from "../utils/verifyToken.js"
 const router = express.Router();
 
-//CREATE //commentverifyadmin to do tests without jwt auth
-router.post("/", /*verifyAdmin,*/ createHotel);
+//CREATE //commentverifyadmin to do tests without jwt
+router.post("/", verifyAdmin, createHotel);
 
 //UPDATE
-router.put("/:id", /*verifyAdmin,*/ updateHotel);
+router.put("/:id", verifyAdmin, updateHotel);
 //DELETE
-router.delete("/:id",/* verifyAdmin,*/ deleteHotel);
+router.delete("/:id",verifyAdmin, deleteHotel);
 //GET
 
-router.get("/find/:id", getHotel);
+router.get("/find/:id",verifyAdmin, getHotel);
 //GET ALL
 
-router.get("/", getHotels);
+router.get("/",verifyAdmin, getHotels);
 router.get("/countByCity", countByCity);
 router.get("/countByType", countByType);
 router.get("/room/:id", getHotelRooms);

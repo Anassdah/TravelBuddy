@@ -56,7 +56,7 @@ const Login = () => {
     <body>
       <div className="login">
       <div className="lContainer">
-      <h2 className="logo">Travel Buddy</h2>
+      <h1 class="logo">Travel Buddy</h1>
         <input
           type="text"
           placeholder="username"

@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  api:
+    build: ./api
+    ports:
+      - "8800:8800"
+    environment:
+      - DB-URL=mongodb://mongo/test
+
+    networks:
+      - net
+    depends_on:
+      - mongo
+  client:
+    build: ./client
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks:
+      - net
+    depends_on:
+      - api
+  mongo:
+    image: mongo:4.2.20-rc0-bionic
+    ports:
+    - "27017:27017"
+networks:
+  net:
+    driver: bridge

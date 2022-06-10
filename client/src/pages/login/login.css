@@ -11,6 +11,11 @@
   font-weight: bold;
   font-size: 30px;
 }
+.logoimage{
+    width: 100%;
+    max-width: 169px;
+    height: 100%;
+}
 body{
   /*background-image: url(../../../../assets/images/wallpaperbetter.com_3840x2160.jpg);*/
   background-repeat: no-repeat;

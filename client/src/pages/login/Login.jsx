@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import logo from "../../images/TravelBuddy.png"
 import "./login.css";
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -56,7 +57,7 @@ const Login = () => {
     <body>
       <div className="login">
       <div className="lContainer">
-      <h1 class="logo">Travel Buddy</h1>
+        <img src={logo} className='logoimage' alt="" />
         <input
           type="text"
           placeholder="username"
